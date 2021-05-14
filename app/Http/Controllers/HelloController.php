@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 class HelloController extends Controller
 {
 
-    public function index(){
+    public function about(){
         return view('about');
+    }
+    
+    public function services(){
+        return view('services');
     }
 }

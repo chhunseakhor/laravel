@@ -7,8 +7,10 @@
     <title>@yield('title') </title>
 </head>
 <body>
-<h1>welcome to laravel 8</h1>
-<p>with some additional text.</p>
+<ul>
+    <li><a href="/about">about</li>
+    <li><a href="/services">services</li>
+</ul>
 
 @yield('content')
 </body>
