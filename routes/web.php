@@ -23,4 +23,7 @@ use App\Http\Controllers\HelloController;
 Route::get('/about',[HelloController::class,'about']);
 Route::get('/services',[HelloController::class,'services']);
 
+// Route::view('/about','about');
+// Route::view('/services','services');
+
 
