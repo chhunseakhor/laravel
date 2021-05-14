@@ -21,6 +21,7 @@ Route::get('/',function(){
 
 // Route::get('/',[HelloController::class,'index']);
 Route::get('/about',[HelloController::class,'about']);
+
 Route::get('/services',[HelloController::class,'services']);
 
 // Route::view('/about','about');
