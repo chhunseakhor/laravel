@@ -3,8 +3,8 @@
 @section('content')
 <h1>Services Page</h1>
 <ul>
-    @foreach( $services as $services)
-        <li>{{$services}}</li>
+    @foreach( $services as $service)
+        <li>{{$service}}</li>
     @endforeach
 </ul>
 @endsection

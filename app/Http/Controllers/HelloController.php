@@ -17,6 +17,6 @@ class HelloController extends Controller
             'service2',
             'service3',
         ]
-        return view('services',compact('services'));
+        return view('services', compact('services'));
     }
 }
