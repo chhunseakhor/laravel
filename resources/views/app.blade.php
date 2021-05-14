@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
+    <title>@yield('title') </title>
 </head>
 <body>
-<ul>
-    <li><a href="/about"></a></li>
-    <li></li>
-</ul>
-@yield('content')
+<h1>welcome to laravel 8</h1>
+<p>with some additional text.</p>
 
+@yield('content')
 </body>
 </html>

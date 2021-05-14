@@ -1,10 +1,5 @@
-@extends('app')
-
-@section('title','Sever')
+@extends ('app')
+@section('title','about US Page')
 @section('content')
-
-
-<h1>about page</h1>
-<h1>enabout page</h1>
+<h1>hello about is not app</h1>
 @endsection
-

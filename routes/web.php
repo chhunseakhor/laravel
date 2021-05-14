@@ -19,4 +19,8 @@ use App\Http\Controllers\HelloController;
 //     return view('welcome');
 // });
 
-Route::get('/hello',[HelloController::class,'index']);
+Route::get('/',[HelloController::class,'index']);
+// Route::get('/about',[HelloController::class,'about']);
+// Route::get('/services',[HelloController::class,'services']);
+
+
