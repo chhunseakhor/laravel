@@ -12,18 +12,7 @@ class HelloController extends Controller
         return view('/about');
     }
 
-    public function services(){
-
-        // $service = [
-        // 'service 1',
-        // 'service 2',
-        // 'service 3'
-        // ];
-        $service =[];
-
-
-        return view ('services',["service"=>$service]);
-    }
+   
 
 
 }

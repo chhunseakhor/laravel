@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
-
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +22,9 @@ Route::get('/',function(){
 // Route::get('/',[HelloController::class,'index']);
 Route::get('/about',[HelloController::class,'about']);
 
-Route::get('/services',[HelloController::class,'services']);
+Route::get('/service',[ServiceController::class,'index']);
+Route::post('/service',[ServiceController::class,'store']);
+
 
 // Route::view('/about','about');
 // Route::view('/services','services');
