@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,10 @@ Route::get('/about',[HelloController::class,'about']);
 Route::get('/service',[ServiceController::class,'index']);
 Route::post('/service',[ServiceController::class,'store']);
 
+Route::get('/customer',[CustomerController::class,'index']);
+Route::get('/customer/create',[CustomerController::class,'create']);
+Route::get('/customer/{customer}',[CustomerController::class,'show']);
+Route::post('/customer',[CustomerController::class,'store']);
 
 // Route::view('/about','about');
 // Route::view('/services','services');
