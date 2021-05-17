@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Requests;
+use Illuminate\Http\Request;
 
 use \App\Models\Customer;
 
 class CustomerController extends Controller
 {
-    public function index(){
-        $customer =Customer::all();
+    public function index(Request $request){
+        $customer =Customer::where('active',$request->query('active',1))->get();
         return view ('customer.index',compact('customer'));
     }
     public function create(){

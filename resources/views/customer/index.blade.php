@@ -1,6 +1,8 @@
 <h1>Customer Page</h1>
 
 <a href="/laravel/public/customer/create" >Add New Customer</a>
+<a href="/laravel/public/customer?active=1" >Active</a>
+<a href="/laravel/public/customer?active=0" >Inactive</a>
 
 @forelse($customer as $person)
 
