@@ -15,18 +15,9 @@ class CustomerController extends Controller
         return view('customer.create');
     }
     public function store(){
-        Customer::create(request()->validate([
-            'name'=>'required',
-            'email'=>'required|email'
-            ]));
-
-        return redirect('/customer');
+        $customer = Customer::create($this->validateData());
+        return redirect('/customer/'.$customer->id);
     }
-    // public function show($customerId){
-    //      $customer =\App\Models\Customer::find($customerId); (ទម្រង់ត្រូវសរសេរដំបូងបំផុត ដោយមានកែសម្រួលក្នុងសរសេរ code)
-    //      return view('customer.show',compact('customer'));
-    // }
-    // first option
 
     public function show(Customer $customer){
          return view('customer.show',compact('customer'));
@@ -35,12 +26,19 @@ class CustomerController extends Controller
         return view ('customer.edit',compact('customer'));
     }
     public function update(Customer $customer){
-        $data =request()-> validate([
-            'name'=>'request',
-            'email'=> 'request|email'
-        ]);
-        $customer-> update($data);
-            return redirect('/customer');
+
+        $customer-> update($this->valideData());
+        return redirect('/customer');
+    }
+    public function destroy(Customer $customer){
+        $customer-> delete();
+        return redirect('/customer');
     }
 
+    protected function validateData(){
+        return request()->validate([
+            'name'=>'required',
+            'email'=>'required'
+        ]);
+    }
 }

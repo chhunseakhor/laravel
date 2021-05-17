@@ -15,6 +15,11 @@
 <div>
 
 <a href="/laravel/public/customer/{{$customer->id}}/edit">edit</a>
+<form action="/laravel/public/customer/{{$customer->id}}" method="post">
+    @method ('DELETE')
+    @csrf
+    <button>delete</button>
+</form>
 </div>
 
 
