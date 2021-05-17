@@ -29,6 +29,9 @@ Route::post('/service',[ServiceController::class,'store']);
 Route::get('/customer',[CustomerController::class,'index']);
 Route::get('/customer/create',[CustomerController::class,'create']);
 Route::get('/customer/{customer}',[CustomerController::class,'show']);
+Route::get('/customer/{customer}/edit',[CustomerController::class,'edit']);
+Route::patch('/customer/{customer}',[CustomerController::class,'update']);
+
 Route::post('/customer',[CustomerController::class,'store']);
 
 // Route::view('/about','about');
