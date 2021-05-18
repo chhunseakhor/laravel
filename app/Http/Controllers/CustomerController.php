@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
-
+use App\Mail\WelcomeMail;
 use \App\Models\Customer;
+
 
 class CustomerController extends Controller
 {
@@ -13,10 +15,12 @@ class CustomerController extends Controller
     }
     public function create(){
         $customer= new Customer();
+        
         return view('customer.create',compact('customer'));
     }
     public function store(){
         $customer = Customer::create($this->validateData());
+        Mail::to($customer->email())->send(new WelcomeMail());
         return redirect('/customer/'.$customer->id);
     }
 

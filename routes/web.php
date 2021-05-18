@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CustomerController;
-
+use App\Mail\WelcomeMail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +16,10 @@ use App\Http\Controllers\CustomerController;
 |
 */
 
-Route::get('/',function(){
-    return view('home');
-});
+// Route::get('/email',function(){
+//     Mail::to('email@email.com')->send (new welcomeMail());
+//     return new WelcomeMail();
+// });
 
 // Route::get('/',[HelloController::class,'index']);
 Route::get('/about',[HelloController::class,'about']);
