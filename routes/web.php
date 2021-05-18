@@ -20,6 +20,9 @@ use App\Mail\WelcomeMail;
 //     Mail::to('email@email.com')->send (new welcomeMail());
 //     return new WelcomeMail();
 // });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/',[HelloController::class,'index']);
 Route::get('/about',[HelloController::class,'about']);
